@@ -12,7 +12,7 @@ function Login() {
                     src="https://i.ibb.co/ZgX0Xtk/pngegg.png"
                     width={200}
                     height={170}
-                    className="opacity-90 object-cover rounded-r-full"
+                    className="opacity-90 object-cover rounded-r-full shadow-inner"
                 />
 
                 <button
