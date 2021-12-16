@@ -14,7 +14,12 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1>NatyVerse</h1>
-            <button onClick={logout} className="bg-purple-200">logout</button>
+            <button
+                    className="bg-purple-500 rounded-lg p-5 font-bold animate-pulse"
+                    onClick={logout}
+                >
+                LOGOUT
+                </button>
         </div>
     );
 }

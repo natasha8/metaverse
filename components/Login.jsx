@@ -16,7 +16,7 @@ function Login() {
                 />
 
                 <button
-                    className="bg-yellow-500 rounded-lg p-5 font-bold animate-pulse"
+                    className="bg-pink-500 border border-black rounded-lg p-5 font-bold animate-pulse"
                     onClick={authenticate}
                 >
                     Login To The NatyVerse
