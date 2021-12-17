@@ -1,25 +1,32 @@
 import Head from "next/head";
 import Login from "../components/Login";
 import { useMoralis } from "react-moralis";
+import Header from "../components/Header";
+import Messages from "../components/Messages";
 
 export default function Home() {
-    const { isAuthenticated , logout} = useMoralis();
+    const { isAuthenticated, logout } = useMoralis();
 
     if (!isAuthenticated) return <Login />;
 
     return (
-        <div className="h-screen">
+        <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-fuchsia-900 overflow-hidden">
             <Head>
                 <title>NatyVerse</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1>NatyVerse</h1>
+
+            <div className="m-w-screen-2xl mx-auto lg:mx-24">
+                <Header />
+                <Messages />
+            </div>
+
             <button
-                    className="bg-purple-500 rounded-lg p-5 font-bold animate-pulse"
-                    onClick={logout}
-                >
-                LOGOUT
-                </button>
+                className="bg-purple-500 rounded-lg p-5 font-bold animate-pulse"
+                onClick={logout}
+            >
+                logout
+            </button>
         </div>
     );
 }
